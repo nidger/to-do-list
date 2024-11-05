@@ -10,10 +10,23 @@
   <div class="container">
     <input type="text" id="taskInput" placeholder="Enter your task">
     <button id="addButton">Add Task</button>
+    
+    <!-- Template moved outside the ul -->
+    <template id="taskTemplate">
+      <li class="task-item">
+        <span class="task-text"></span>
+        <div class="task-buttons">
+          <button class="start-btn">Start Task</button>
+          <button class="finish-btn">Finish Task</button>
+          <button class="delete-btn">Delete Task</button>
+        </div>
+      </li>
+    </template>
+
     <ul id="taskList">
       <!-- tasks will be added here -->
     </ul>
- </div>
- <script src="main.js"></script>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
