@@ -1,0 +1,27 @@
+.container {
+  background-color: aliceblue;
+  max-width: 80rem;
+  height: 90vh;
+  margin: 20px auto;
+  padding 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#taskInput {
+  padding: 8px;
+  font-size: 32px;
+  width: 70%;
+  margin-right: 10px;
+}
+
+#addButton {
+  padding: 8px 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+#taskList {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
