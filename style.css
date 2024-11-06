@@ -3,7 +3,7 @@
   max-width: 80rem;
   height: 90vh;
   margin: 20px auto;
-  padding 20px;
+  padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -41,13 +41,13 @@
 }
 
 .task-item.in-progress {
-  background-color: #fff3cd;
-  border-color: #ffeeba;
+  background-color: #cdffd8;
+  border-color: #cdffd8;
 }
 
 .task-item.completed {
-  background-color: #d4edda;
-  border-color: #c3e6cb;
+  background-color: #edd4d7;
+  border-color: #edd4d7;
   text-decoration: line-through;
 }
 
@@ -55,7 +55,7 @@
   margin-top: 5px;
 }
 
-.button:disabled {
+/* .button:disabled {
 opacity: 0.5;
 cursor: not-allowed;
 }
@@ -67,4 +67,4 @@ cursor: not-allowed;
 .completed {
   background-color: #d4edda;
   text-decoration: line-through;
-}
+} */

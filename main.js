@@ -7,27 +7,40 @@ const taskTemplate = document.getElementById('taskTemplate');
 // Create our tasks array to store all tasks
 let tasks = [];
 
-// Add event listener to the button
+function createTask() {
+  // Get the task text from input
+  const taskText = taskInput.value.trim();
+
+  // Basic validation - check if input is not empty
+  if (taskText !== '') {
+   const task = {
+     id: Date.now(), //unique identifier
+     text: taskText,
+     status: 'todo' //inital status
+   };
+
+      // Add task to array
+      tasks.push(task);
+      // Add to DOM
+      addTask(task);
+      
+      // Clear the input field
+      taskInput.value = '';
+  }
+};
+
 addButton.addEventListener('click', function() {
-    // Get the task text from input
-    const taskText = taskInput.value.trim();
-    
-    // Basic validation - check if input is not empty
-    if (taskText !== '') {
-      const task = {
-        id: Date.now(), //unique identifier
-        text: taskText,
-        status: 'todo' //inital status
-      };
-        // Add task to array
-        tasks.push(task);
-        // Add to DOM
-        addTask(task);
-        
-        // Clear the input field
-        taskInput.value = '';
-    }
+createTask();
 });
+
+taskInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    createTask();
+  }
+});
+
+
+
 
 function addTask(task) {
   //Clone the template
@@ -45,11 +58,12 @@ function addTask(task) {
   startButton.addEventListener('click', function() {
       //find the task in our array and update its status
       const taskInArray = tasks.find(t => t.id === task.id); // Fixed: Added arrow function syntax
-      taskInArray.status = 'in-progress'; // Fixed: Removed unnecessary parentheses
+      taskInArray.status = 'in-progress';
+
 
       //update visual appearance
-      const listItem = this.closest('.task-item'); // Fixed: Added dot for class selector
-      listItem.classList.add('in-progress'); // Fixed: Removed dot from class name
+      const listItem = this.closest('.task-item'); 
+      listItem.classList.add('in-progress'); 
 
       //disable start button, enable finish button
       startButton.disabled = true;
