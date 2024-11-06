@@ -29,25 +29,25 @@
 #taskList li {
   padding: 10px;
   margin: 5px 0;
-  background-color: white;
   border-radius: 4px;
   font-size: 24px;
 }
 
 .task-item {
   padding: 10px;
-  border: solid 1px #ddd;
+  background-color: rgb(255, 127, 127);
+  border: solid 1px #950000;
   margin: 5px 0;
 }
 
 .task-item.in-progress {
-  background-color: #cdffd8;
-  border-color: #cdffd8;
+  background-color: #ffebcd;
+  border-color: #ffebcd;
 }
 
 .task-item.completed {
-  background-color: #edd4d7;
-  border-color: #edd4d7;
+  background-color: #d4edd8;
+  border-color: #03770b;
   text-decoration: line-through;
 }
 

@@ -14,13 +14,13 @@ function createTask() {
   // Basic validation - check if input is not empty
   if (taskText !== '') {
    const task = {
-     id: Date.now(), //unique identifier
+     id: Date.now(), 
      text: taskText,
-     status: 'todo' //inital status
+     status: 'todo' 
    };
-
       // Add task to array
       tasks.push(task);
+
       // Add to DOM
       addTask(task);
       
@@ -29,10 +29,12 @@ function createTask() {
   }
 };
 
+//creating a task - running createTask function with click of button
 addButton.addEventListener('click', function() {
 createTask();
 });
 
+//creating a task - running createTask function with a press of the return key
 taskInput.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     createTask();
@@ -40,7 +42,7 @@ taskInput.addEventListener('keydown', (event) => {
 });
 
 
-
+//adding the task into the list
 
 function addTask(task) {
   //Clone the template
@@ -56,8 +58,9 @@ function addTask(task) {
 
   //add event listeners to the buttons
   startButton.addEventListener('click', function() {
+
       //find the task in our array and update its status
-      const taskInArray = tasks.find(t => t.id === task.id); // Fixed: Added arrow function syntax
+      const taskInArray = tasks.find(t => t.id === task.id);
       taskInArray.status = 'in-progress';
 
 
